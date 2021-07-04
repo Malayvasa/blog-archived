@@ -1,10 +1,10 @@
 {
   "title": "Malay's Blog",
   "author": "Malay Vasa",
-  "headerTitle": "Hey, I’m Malay Vasa",
-  "description": "I'm a designer, coder, and creator. I work as a Product Design Intern at Modfy.Video.  Welcome to my corner of the internet.",
+  "headerTitle": "Malay's Blog",
+  "description": "Welcome to my corner of the internet.",
   "language": "en-us",
-  "siteUrl": "https://malayvasa.com",
+  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
   "siteRepo": "https://github.com/malayvasa/blog",
   "image": "/static/images/avatar.png",
   "socialBanner": "/static/images/twitter-card.png",
@@ -12,5 +12,6 @@
   "github": "https://github.com/malayvasa",
   "twitter": "https://twitter.com/MalayVasa",
   "linkedin": "https://www.linkedin.com/malayvasa",
+  "instagram": "https://www.instagram.com/malayvasa",
   "locale": "en-US"
 }

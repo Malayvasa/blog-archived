@@ -2,6 +2,8 @@ import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import Image from '@/components/Image'
 import { PageSeo } from '@/components/SEO'
+import Link from '@/components/Link'
+import Footer from '@/components/Footer'
 
 export default function About() {
   return (
@@ -29,8 +31,8 @@ export default function About() {
             <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
               {siteMetadata.author}
             </h3>
-            <div className="text-gray-500 dark:text-gray-400">Professor of Atmospheric Science</div>
-            <div className="text-gray-500 dark:text-gray-400">Stanford University</div>
+            <div className="text-gray-500 dark:text-gray-400"></div>
+            <div className="text-gray-500 dark:text-gray-400"></div>
             {/* <div className="flex pt-6 space-x-3">
               <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} />
               <SocialIcon kind="github" href={siteMetadata.github} />
@@ -42,23 +44,27 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His
-              research interests includes complexity modelling of tailwinds, headwinds and
-              crosswinds.
+              I'm a student at Srishti Manipal Institute in Bangalore, where I'm studying HCI and
+              UI/UX. Over the past couple of years, I've been freelancing as a designer. I've
+              handled Social Media creatives for companies like{' '}
+              <Link href="https://leapfinance.com/">Leap Finance</Link>,{' '}
+              <Link href="https://avalonmeta.com/">Avalon Labs</Link>, etc. I'm also currently
+              Interning as a Product Designer at <Link href="https://modfy.video/">Modfy</Link> a
+              SaaS company making Figma for video.
             </p>
             <p>
-              He leads the clean energy group which develops 3D air pollution-climate models, writes
-              differential equation solvers, and manufactures titanium plated air ballons. In his
-              free time he bakes raspberry pi.
+              In the past couple of months, I have been exploring creative coding and one of my
+              first projects,{' '}
+              <Link href="https://www.behance.net/gallery/89701531/Generative-Identity-Abstract-Symbols-From-Names">
+                Generative Identity
+              </Link>{' '}
+              has been featured in the p5.js 2020 worldwide showcase.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique
-              placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem
-              nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-            </p>
+            <p></p>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
