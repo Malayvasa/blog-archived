@@ -1,0 +1,18 @@
+{
+  "title": "The Lazy Channel",
+  "author": "Malay Vasa",
+  "headerTitle": "",
+  "description": "A blog created with Next.js and Tailwind.css",
+  "language": "en-us",
+  "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
+  "siteRepo": "https://github.com/timlrx/tailwind-nextjs-starter-blog",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "malayv@acm.org",
+  "github": "https://github.com",
+  "twitter": "https://twitter.com/MalayVasa",
+  "facebook": "https://facebook.com",
+  "youtube": "https://youtube.com",
+  "linkedin": "https://www.linkedin.com",
+  "locale": "en-US"
+}
