@@ -33,10 +33,10 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         pagination={pagination}
         title="All Posts"
       /> */}
-      {posts.map((frontMatter) => {
-        const { slug, date, title, summary, tags } = frontMatter
-        return (
-          <ul className="divide-y divide-gray-400 dark:divide-gray-700">
+      <ul className="divide-y divide-gray-400 dark:divide-gray-700">
+        {posts.map((frontMatter) => {
+          const { slug, date, title, summary, tags } = frontMatter
+          return (
             <li key={slug} className="py-12">
               <article>
                 <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
@@ -79,9 +79,9 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
                 </div>
               </article>
             </li>
-          </ul>
-        )
-      })}
+          )
+        })}
+      </ul>
     </>
   )
 }
