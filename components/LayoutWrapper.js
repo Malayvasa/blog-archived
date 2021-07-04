@@ -13,7 +13,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col justify-between h-screen">
         <header className="flex items-center justify-between py-10">
           <div>
-            <div className="flex -ml-2 md:-ml-5 items-center justify-between">
+            <div className="flex ml-1 md:-ml-5 items-center justify-between">
               {/* <div className="mr-3">
                   <Logo />
                 </div> */}

@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 export default function About() {
   return (
-    <>
+    <div className="flex flex-col justify-between h-screen">
       <PageSeo
         title={`About - ${siteMetadata.author}`}
         description={`About me - ${siteMetadata.author}`}
@@ -64,7 +64,8 @@ export default function About() {
           </div>
         </div>
       </div>
+
       <Footer />
-    </>
+    </div>
   )
 }

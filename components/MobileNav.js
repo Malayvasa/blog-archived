@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Link from './Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import Footer from '@/components/Footer'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -21,7 +22,7 @@ const MobileNav = () => {
     <div className="sm:hidden">
       <button
         type="button"
-        className="w-8 h-8 ml-1 mr-1 rounded"
+        className="w-8 h-8 ml-1 mr-1 rounded focus:outline-none"
         aria-label="Toggle Menu"
         onClick={onToggleNav}
       >
@@ -47,28 +48,33 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed w-full h-full top-24 right-0 bg-gray-100 dark:bg-gray-800 z-10 transform ease-in-out duration-300 ${
+        className={`fixed w-full h-full top-24 right-0 bg-white dark:bg-gray-900 z-10 transform ease-in-out duration-300 ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <button
+        {/* <button
           type="button"
           aria-label="toggle modal"
           className="fixed w-full h-full cursor-auto focus:outline-none"
           onClick={onToggleNav}
-        ></button>
-        <nav className="fixed h-full mt-8">
-          {headerNavLinks.map((link) => (
-            <div key={link.title} className="px-8 py-2">
-              <Link
-                href={link.href}
-                className="text-2xl font-bold text-gray-900 dark:text-gray-100"
-                onClick={onToggleNav}
-              >
-                {link.title}
-              </Link>
-            </div>
-          ))}
+        ></button> */}
+        <nav className="fixed w-full h-full mt-8 flex flex-col justify-start">
+          <div>
+            {headerNavLinks.map((link) => (
+              <div key={link.title} className="py-2 px-2 mx-4">
+                <Link
+                  href={link.href}
+                  className="text-xl tracking-wider font-medium uppercase text-gray-500 dark:text-gray-500"
+                  onClick={onToggleNav}
+                >
+                  {link.title}
+                </Link>
+              </div>
+            ))}
+          </div>
+          <div className="mt-72">
+            <Footer />
+          </div>
         </nav>
       </div>
     </div>
