@@ -5,11 +5,17 @@ import { PageSeo } from '@/components/SEO'
 import Link from '@/components/Link'
 import Footer from '@/components/Footer'
 import SectionContainer from '@/components/SectionContainer'
+import { motion } from 'framer-motion'
 
 export default function About() {
   return (
     <SectionContainer>
-      <div className="flex flex-col justify-between h-screen">
+      <motion.div
+        className="flex flex-col justify-between h-screen"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
+      >
         <PageSeo
           title={`About - ${siteMetadata.author}`}
           description={`About me - ${siteMetadata.author}`}
@@ -66,9 +72,8 @@ export default function About() {
             </div>
           </div>
         </div>
-
         <Footer />
-      </div>
+      </motion.div>
     </SectionContainer>
   )
 }
