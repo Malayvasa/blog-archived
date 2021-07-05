@@ -24,7 +24,7 @@ export default function Home({ posts }) {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8">
           <h1 className="text-2xl md:text-5xl mb-4 font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-            Hey I'm Malay Vasa{' '}
+            Hey, I'm Malay Vasa{' '}
             <span role="img" aria-label="emoji">
               👋
             </span>
@@ -35,9 +35,9 @@ export default function Home({ posts }) {
               href={'https://modfy.video/'}
               className="ml-1 text-indigo-500 dark:text-indigo-500"
             >
-              Modfy
-            </Link>
-            . Welcome to my corner of the Internet.
+              Modfy.
+            </Link>{' '}
+            Welcome to my corner of the Internet.
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
