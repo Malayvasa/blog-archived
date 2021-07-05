@@ -4,6 +4,7 @@ import ListLayout from '@/layouts/ListLayout'
 import { PageSeo } from '@/components/SEO'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
+import { motion } from 'framer-motion'
 
 export const POSTS_PER_PAGE = 10
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -21,7 +22,11 @@ export async function getStaticProps() {
 
 export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
+    >
       <PageSeo
         title={`Blog - ${siteMetadata.author}`}
         description={siteMetadata.description}
@@ -85,6 +90,6 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
           )
         })}
       </ul>
-    </>
+    </motion.div>
   )
 }
