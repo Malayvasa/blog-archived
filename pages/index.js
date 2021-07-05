@@ -3,6 +3,7 @@ import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
+import { motion } from 'framer-motion'
 
 const MAX_DISPLAY = 2
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
@@ -15,7 +16,11 @@ export async function getStaticProps() {
 
 export default function Home({ posts }) {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
+    >
       <PageSeo
         title={siteMetadata.title}
         description={siteMetadata.description}
@@ -105,6 +110,6 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-    </>
+    </motion.div>
   )
 }

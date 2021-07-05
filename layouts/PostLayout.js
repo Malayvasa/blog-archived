@@ -44,7 +44,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </motion.div>
               </dl>
               <motion.div
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
               >
