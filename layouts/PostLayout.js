@@ -6,6 +6,7 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
+import { motion } from 'framer-motion'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -26,21 +27,35 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
           <header className="pt-6 xl:pb-6">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
+                >
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      🗓 {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                      <span role="img" aria-label="emoji">
+                        🗓
+                      </span>{' '}
+                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
                   </dd>
-                </div>
+                </motion.div>
               </dl>
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
+              >
                 <PageTitle>{title}</PageTitle>
-              </div>
+              </motion.div>
             </div>
           </header>
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
@@ -135,7 +150,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </Link>
               </div>
             </footer>
-          </div>
+          </motion.div>
         </div>
         <div>
           <Footer />
