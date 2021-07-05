@@ -44,6 +44,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                       <time dateTime={date}>
+                        {'🗓 '}
                         {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                       </time>
                     </dd>

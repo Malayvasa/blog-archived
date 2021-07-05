@@ -72,9 +72,9 @@ const MobileNav = () => {
               </div>
             ))}
           </div>
-          <div className="mt-72">
+          {/* <div className="mt-72">
             <Footer />
-          </div>
+          </div> */}
         </nav>
       </div>
     </div>
