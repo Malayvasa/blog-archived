@@ -11,7 +11,7 @@ export default function About() {
   return (
     <SectionContainer>
       <motion.div
-        className="flex flex-col justify-between h-screen"
+        className="flex flex-col justify-between h-full"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: 'easeIn', duration: 1, type: 'spring' }}

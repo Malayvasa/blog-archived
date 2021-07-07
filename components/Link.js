@@ -9,7 +9,7 @@ const CustomLink = ({ href, ...rest }) => {
   if (isInternalLink) {
     return (
       <Link href={href}>
-        <a {...rest} />
+        <a className="text-purple-500" {...rest} />
       </Link>
     )
   }
