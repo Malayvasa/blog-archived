@@ -63,7 +63,7 @@ const MobileNav = () => {
           <nav className="fixed w-full h-full mt-8 flex flex-col justify-start">
             <div>
               {headerNavLinks.map((link) => (
-                <div key={link.title} className="py-2 px-2 mx-8">
+                <div key={link.title} className="py-2 px-2 mx-6">
                   <Link
                     href={link.href}
                     className="text-xl tracking-wider font-medium uppercase text-gray-500 dark:text-gray-500"

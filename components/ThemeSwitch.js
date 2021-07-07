@@ -19,7 +19,7 @@ const ThemeSwitch = () => {
         className="ml-2 md:ml-4"
         checked={mounted && (theme === 'light' ? false : true)}
         onChange={toggleDarkMode}
-        size={36}
+        size={24}
       />
     </>
   )
